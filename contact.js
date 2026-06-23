@@ -1,4 +1,4 @@
-// contact.js - Fixed
+// contact.js
 import { Navbar, initNavbar } from './navbar.js';
 import { renderContactForm, initContactForm } from './contactForm.js';
 import { renderFooter } from './footer.js';
