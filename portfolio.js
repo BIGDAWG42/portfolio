@@ -1,15 +1,17 @@
-// src/pages/portfolio.js
-import { Navbar, initNavbar } from '../components/navbar.js';
-import { renderFooter } from '../components/footer.js';
-import { renderProjectCard } from '../components/projectCard.js';
-import { renderProjectModal } from '../components/projectModal.js';
-import { initProjectModal } from '../components/projectModal.js';
+// portfolio.js - Fixed
+import { Navbar, initNavbar } from './navbar.js';
+import { renderFooter } from './footer.js';
+import { renderProjectCard } from './projectCard.js';
+import { renderProjectModal } from './projectModal.js';
+import { initProjectModal } from './projectModal.js';
 
 export async function renderPortfolio() {
   const app = document.getElementById('app');
   if (!app) return;
-  const res = await fetch('./src/data/projects.json');
+
+  const res = await fetch('./projects.json');
   const projects = await res.json();
+
   app.innerHTML = `
     <div class="page-transition">
       ${Navbar('portfolio')}
@@ -29,15 +31,17 @@ export async function renderPortfolio() {
       ${renderFooter()}
     </div>
   `;
-  // Render cards
+
   const grid = document.getElementById('project-grid');
   grid.innerHTML = projects.map(p => renderProjectCard(p)).join('');
-  // Render modals (hidden)
+
+  // Modals
   const modalsContainer = document.createElement('div');
   modalsContainer.innerHTML = projects.map(p => renderProjectModal(p)).join('');
   document.body.appendChild(modalsContainer);
 
   initProjectModal();
+
   // Filter logic
   const filterBar = document.getElementById('filter-bar');
   filterBar.addEventListener('click', (e) => {
@@ -45,16 +49,13 @@ export async function renderPortfolio() {
     const type = e.target.dataset.type;
     const filtered = type === 'all' ? projects : projects.filter(p => p.type === type);
     grid.innerHTML = filtered.map(p => renderProjectCard(p)).join('');
-    // Update modal events
     initProjectModal();
-    // Update active tab styling
+
     filterBar.querySelectorAll('.filter-bar__tab').forEach(t => t.classList.remove('filter-bar__tab--active'));
     e.target.classList.add('filter-bar__tab--active');
   });
-  // Set default active tab
+
   filterBar.querySelector('[data-type="all"]').classList.add('filter-bar__tab--active');
 }
 
-export function initPortfolio() {
-  // Nothing special for now – page init handled in renderPortfolio
-}
+export function initPortfolio() {}
