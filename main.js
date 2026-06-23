@@ -1,11 +1,4 @@
-// main.js - Flat structure fix
-import './theme.css';
-import './base.css';
-import './layout.css';
-import './animations.css';
-import './components.css';
-
-// Page modules
+// main.js - Final flat fix (no CSS imports)
 import { renderHome, initHome } from './home.js';
 import { renderPortfolio, initPortfolio } from './portfolio.js';
 import { renderContact, initContact } from './contact.js';
