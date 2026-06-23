@@ -1,4 +1,4 @@
-// main.js - Final flat fix (no CSS imports)
+// main.js - Fully fixed for flat structure + no CSS imports in JS
 import { renderHome, initHome } from './home.js';
 import { renderPortfolio, initPortfolio } from './portfolio.js';
 import { renderContact, initContact } from './contact.js';
