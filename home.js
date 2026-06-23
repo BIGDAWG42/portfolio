@@ -1,4 +1,4 @@
-// home.js - Fixed
+// home.js
 import { Navbar, initNavbar } from './navbar.js';
 import { renderHero, initHero } from './hero.js';
 import { renderFooter } from './footer.js';
