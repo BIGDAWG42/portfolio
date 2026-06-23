@@ -128,7 +128,7 @@
     "techStack": ["HTML", "CSS", "JavaScript", "MediaPipe", "TensorFlow.js"],
     "gradient": "linear-gradient(135deg, var(--color-ai), var(--color-primary))",
     "image": "project_placeholder_1782157989837.png",
-    "demoLink": "",
+    "demoLink": "https://push-up-challange.onrender.com/",
     "repoLink": ""
   },
   {
