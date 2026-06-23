@@ -1,4 +1,4 @@
-// main.js - Fixed for flat root structure
+// main.js - Flat structure fix
 import './theme.css';
 import './base.css';
 import './layout.css';
@@ -44,10 +44,7 @@ async function loadPage() {
   initNavbar();
 }
 
-// Listen for hash changes (SPA navigation)
 window.addEventListener('hashchange', loadPage);
-
-// Initial load
 loadPage();
 
 console.log('Portfolio SPA initialized');
