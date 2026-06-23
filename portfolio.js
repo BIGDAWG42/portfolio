@@ -1,9 +1,8 @@
-// portfolio.js - Fixed
+// portfolio.js
 import { Navbar, initNavbar } from './navbar.js';
 import { renderFooter } from './footer.js';
 import { renderProjectCard } from './projectCard.js';
-import { renderProjectModal } from './projectModal.js';
-import { initProjectModal } from './projectModal.js';
+import { renderProjectModal, initProjectModal } from './projectModal.js';
 
 export async function renderPortfolio() {
   const app = document.getElementById('app');
@@ -42,7 +41,7 @@ export async function renderPortfolio() {
 
   initProjectModal();
 
-  // Filter logic
+  // Filter
   const filterBar = document.getElementById('filter-bar');
   filterBar.addEventListener('click', (e) => {
     if (!e.target.matches('.filter-bar__tab')) return;
@@ -58,4 +57,4 @@ export async function renderPortfolio() {
   filterBar.querySelector('[data-type="all"]').classList.add('filter-bar__tab--active');
 }
 
-export function initPortfolio() {}
+export function initPortfolio() {} 
