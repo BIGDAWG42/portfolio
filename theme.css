@@ -1,0 +1,89 @@
+/* src/styles/theme.css */
+:root {
+  /* Font */
+  --font-family: 'Inter', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+
+  /* Primary accent (violet) */
+  --color-primary-h: 250;
+  --color-primary-s: 80%;
+  --color-primary-l: 60%;
+  --color-primary: hsl(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l));
+  --color-primary-light: hsl(var(--color-primary-h), var(--color-primary-s), 70%);
+  --color-primary-dark: hsl(var(--color-primary-h), var(--color-primary-s), 45%);
+
+  /* Secondary accent (cyan) */
+  --color-accent-h: 170;
+  --color-accent-s: 90%;
+  --color-accent-l: 50%;
+  --color-accent: hsl(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l));
+
+  /* Backgrounds */
+  --color-bg: hsl(230, 25%, 8%);
+  --color-bg-alt: hsl(230, 25%, 6%);
+  --color-surface: hsl(230, 20%, 12%);
+  --color-surface-hover: hsl(230, 20%, 16%);
+  --color-surface-active: hsl(230, 20%, 20%);
+
+  /* Text */
+  --color-text: hsl(0, 0%, 92%);
+  --color-text-secondary: hsl(230, 10%, 70%);
+  --color-muted: hsl(230, 15%, 55%);
+  --color-border: hsl(230, 15%, 20%);
+
+  /* Category colors */
+  --color-web: var(--color-primary);
+  --color-mobile: var(--color-accent);
+  --color-games: hsl(30, 90%, 55%);
+  --color-ai: hsl(280, 80%, 55%);
+
+  /* Shadows & glow */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 20px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.3);
+  --shadow-glow-accent: 0 0 20px hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.3);
+
+  /* Glass */
+  --glass-bg: hsla(230, 20%, 12%, 0.7);
+  --glass-blur: blur(16px);
+  --glass-border: 1px solid hsla(230, 15%, 30%, 0.4);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Global fonts */
+body {font-family: var(--font-family); color: var(--color-text);} 
+
+/* Utility classes */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-md);
+}

@@ -1,0 +1,42 @@
+/* src/styles/layout.css */
+/* Layout utilities – containers, sections, grids, responsive breakpoints */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+}
+
+.section {
+  padding: var(--space-4xl) 0;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+.section__subtitle {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-2xl);
+}
+
+/* Responsive grid helpers */
+.grid-2 { display: grid; gap: var(--space-lg); grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { display: grid; gap: var(--space-lg); grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid-4 { display: grid; gap: var(--space-lg); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+/* Breakpoints */
+@media (max-width: 768px) {
+  .section { padding: var(--space-3xl) 0; }
+  .section__title { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: var(--space-2xl) 0; }
+  .section__title { font-size: 1.8rem; }
+}

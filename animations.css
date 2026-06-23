@@ -1,0 +1,59 @@
+/* src/styles/animations.css */
+/* Basic animation utilities for the portfolio SPA */
+
+/* Fade-in animation used for page transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-transition {
+  animation: fadeIn 0.4s ease-out both;
+}
+
+/* Simple hover bounce for buttons */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.btn:hover {
+  animation: bounce 0.3s ease-in-out;
+}
+
+/* Fade-out for modals */
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+.modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Toast slide-in/out */
+@keyframes slideIn {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.toast--visible {
+  opacity: 1;
+  pointer-events: auto;
+  animation: slideIn 0.3s ease-out;
+}
