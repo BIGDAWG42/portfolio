@@ -1,6 +1,6 @@
 [
   {
-    "id": "sec1",
+    "id": "web1",
     "title": "Old Phone Security",
     "type": "tool",
     "shortDesc": "Transform old phones into privacy-focused security cameras",
@@ -13,10 +13,10 @@
   },
   {
     "id": "web2",
-    "title": "Web Project Beta",
+    "title": "Jarvis My Ai helper ",
     "type": "web",
-    "shortDesc": "E‑commerce site with smooth checkout flow.",
-    "fullDesc": "A sleek e‑commerce platform built with vanilla JS, featuring cart management, payment mock‑up, and responsive design.",
+    "shortDesc": "my ai assistant .",
+    "fullDesc": "He can fully take control of my pc and help me work while i talk to him.",
     "techStack": ["HTML", "CSS", "JavaScript"],
     "gradient": "linear-gradient(135deg, var(--color-primary), var(--color-accent))",
     "image": "project_placeholder_1782157989837.png",
@@ -61,13 +61,13 @@
   },
   {
     "id": "mobile3",
-    "title": "",
+    "title": "Mobile App Gamma",
     "type": "mobile",
-    "shortDesc": "",
-    "fullDesc": "",
-    "techStack": [""],
+    "shortDesc": "AR‑enabled educational tool.",
+    "fullDesc": "Uses WebXR to overlay interactive lessons on real‑world objects, supporting both iOS and Android.",
+    "techStack": ["HTML", "CSS", "JavaScript", "Capacitor", "WebXR"],
     "gradient": "linear-gradient(135deg, var(--color-mobile), var(--color-primary))",
-    "image": "",
+    "image": "project_placeholder_1782157989837.png",
     "demoLink": "",
     "repoLink": ""
   },
@@ -109,13 +109,25 @@
   },
   {
     "id": "ai1",
-    "title": "",
+    "title": "AI Tool Alpha",
     "type": "ai",
-    "shortDesc": "",
-    "fullDesc": "",
-    "techStack": [""],
+    "shortDesc": "Prompt engineering helper with live suggestions.",
+    "fullDesc": "A web‑based AI assistant that helps craft prompts for large language models, offering examples and token counts.",
+    "techStack": ["HTML", "CSS", "JavaScript", "OpenAI API"],
     "gradient": "linear-gradient(135deg, var(--color-ai), var(--color-primary))",
-    "image": "",
+    "image": "project_placeholder_1782157989837.png",
+    "demoLink": "",
+    "repoLink": ""
+  },
+  {
+    "id": "ai2",
+    "title": "HappyCal Ai",
+    "type": "ai",
+    "shortDesc": "calorie counter using ai to track .",
+    "fullDesc": "snap a photo see how good your eating .",
+    "techStack": ["HTML", "CSS", "JavaScript", "Stable Diffusion API"],
+    "gradient": "linear-gradient(135deg, var(--color-ai), var(--color-primary))",
+    "image": "project_placeholder_1782157989837.png",
     "demoLink": "",
     "repoLink": ""
   },
@@ -128,7 +140,7 @@
     "techStack": ["HTML", "CSS", "JavaScript", "MediaPipe", "TensorFlow.js"],
     "gradient": "linear-gradient(135deg, var(--color-ai), var(--color-primary))",
     "image": "project_placeholder_1782157989837.png",
-    "demoLink": "https://push-up-challange.onrender.com/",
+    "demoLink": "",
     "repoLink": ""
   },
   {
@@ -144,3 +156,4 @@
     "repoLink": ""
   }
 ]
+
